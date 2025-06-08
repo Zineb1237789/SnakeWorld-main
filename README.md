@@ -8,7 +8,7 @@
 🔧 Explore DevOps practices and improve CI/CD pipelines<br/>
 🧩 Solve complex problems with simple, elegant solutions<br/>
 
-#🎮 MonoGame Project – Snake Game
+🎮 MonoGame Project – Snake Game
 A classic Snake game built with C# and MonoGame, featuring user login, score tracking via XML, and a dynamic HTML scoreboard generated with XSLT. A fun project combining game logic, UI, and data management!
 
 
