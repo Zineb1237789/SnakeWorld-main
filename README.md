@@ -4,9 +4,9 @@
 
 💡 What I love to do:<br/>
 🚀 Build useful and intuitive applications<br/>
-🎮 Design games in C# / MonoGame<br/>
-🌐 Work on web projects and modern interfaces<br/>
-🧩 Solve complex problems with simple solutions<br/>
+🌐 Develop web projects with clean and modern interfaces<br/>
+🔧 Explore DevOps practices and improve CI/CD pipelines<br/>
+🧩 Solve complex problems with simple, elegant solutions<br/>
 
 
 # 💻 Tech Stack:
