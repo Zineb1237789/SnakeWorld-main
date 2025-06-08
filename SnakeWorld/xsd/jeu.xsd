@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<schema version="1.0"
+		xmlns="http://www.w3.org/2001/XMLSchema"
+		xmlns:jeu="http://www.univ-grenoble-alpes.fr/l3miage/jeu"
+		targetNamespace="http://www.univ-grenoble-alpes.fr/l3miage/jeu"
+		elementFormDefault="qualified"
+>
+	<element name="jeu" type="jeu:Jeu"/>
+	<element name="joueurs" type="jeu:Joueurs"/>
+	
+	<complexType name="Jeu">
+		<sequence>
+			<element name="serpent" type="jeu:Serpent"/>
+			<element name="joueurs" type="jeu:Joueurs"/>
+			<element name="nourriture" type="jeu:Nourriture"/>
+		</sequence>
+	</complexType> 
+	
+	<!-- Nourriture  du serpent ************************* -->
+	
+	<complexType name="Nourriture">
+		<sequence>
+			<element name="position" type="jeu:Vecteur2D"/>
+			<element name="taille" type="int"/>
+		</sequence>
+	</complexType>
+	
+	<!-- +++++++++++++++++++++++++++++++ TYPE Vecteur2D  +++++++++++++++++++++++++++++++ -->
+	
+	<complexType name="Vecteur2D">
+		<sequence>
+			<element name="x" type="string"/>
+			<element name="y" type="string"/>
+		</sequence>
+	</complexType>	
+
+	<!-- +++++++++++++++++++++++++++++++ TYPE Serpent  +++++++++++++++++++++++++++++++ -->
+	
+	<complexType name="Serpent">
+		<sequence>
+			<element name="corps" type="jeu:Corps"/>
+			<element name="direction" type="jeu:Vecteur2D"/>
+			<element name="taille" type="int"/>
+		</sequence>
+	</complexType>
+
+	<complexType name="Corps">
+		<sequence>
+			<element name="morceauCorps" type="jeu:Vecteur2D" maxOccurs="unbounded"/>
+		</sequence>
+	</complexType>
+
+	<!-- +++++++++++++++++++++++++++++++ TYPE Joueurs  +++++++++++++++++++++++++++++++ -->
+	
+	<complexType name="Joueurs">
+		<sequence>
+			<element name="joueur" type="jeu:Joueur" maxOccurs="unbounded"/> 
+		</sequence>
+	</complexType>
+
+	<complexType name="Joueur">
+		<sequence>
+			<element name="login" type="string"/>
+			<element name="motDePasse" type="string"/>
+			<element name="meilleurScore" type="unsignedInt"/>
+		</sequence>
+	</complexType>
+</schema>
